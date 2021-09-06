@@ -8,6 +8,7 @@
 	<PublishTrimmed>true</PublishTrimmed>
 	<PublishSingleFile>true</PublishSingleFile>
 	<IncludeAllContentForSelfExtract>true</IncludeAllContentForSelfExtract>
+	<ApplicationIcon>rivenbite1.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
