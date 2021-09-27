@@ -657,6 +657,7 @@ namespace RivenMonch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(722, 450);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.lblSeed);

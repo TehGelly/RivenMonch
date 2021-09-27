@@ -217,11 +217,11 @@ namespace RivenMonch
             uint start = (uint)nmupUndoStart.Value;
             uint end = (uint)nmupUndoEnd.Value;
             uint calls = 0;
-            do
+            while (!(rand.seed >= start && rand.seed <= end))
             {
                 calls++;
                 rand.undoSeed();
-            } while (!(rand.seed >= start && rand.seed <= end));
+            }
 
             lblUndoFound.Text = "Calls = " + calls.ToString();
             nmupSeed.Value = rand.seed;
