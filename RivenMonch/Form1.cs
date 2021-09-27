@@ -186,9 +186,9 @@ namespace RivenMonch
             }
             else
             {
+                nmupGameGames.Value = 1; //obo error due to initing prevseed
                 for (uint i = 0; i < max; i++)
                 {
-                    nmupGameGames.Value = 1; //obo error due to initing prevseed
                     foreach (ScummRand rand in randList)
                     {
                         rand.seed = rand.prevSeed;
