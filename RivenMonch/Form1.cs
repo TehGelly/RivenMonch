@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace RivenMonch
@@ -82,8 +83,13 @@ namespace RivenMonch
             EnableNonTab(false);
             EnableCurrentTab(false);
             lblBasicFound.Text = "";
-            List<uint> findCombos = new List<uint>() { rnTele.val, rnPrison.val, rnDome.val };
             nmupSeed.Value = 0;
+            Thread bruteThread = new Thread(new ThreadStart(bruteThreaded));
+            bruteThread.Start();
+        }
+
+        private void bruteThreaded() {
+            List<uint> findCombos = new List<uint>() { rnTele.val, rnPrison.val, rnDome.val };
             uint i = 0;
             uint? seed;
             for (i = 0; i < uint.MaxValue / BRUTE_UPDATE; i++)
