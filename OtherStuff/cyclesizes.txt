@@ -1,0 +1,34 @@
+this file contains the largest periods of the old scummvm RNG algorithm.
+it's bad, but also infinitely interesting.
+the ideal period of a PRNG is 2^32 - 1 = 4294967295.
+these are the periods of all RNG values that give dome combos of 12345.
+
+the point was to see "hey, even if direct rng manipulation isn't allowed,
+could i increase my odds by starting my seed in a period with more 12345 seeds
+than expected."
+
+as it turns out, for the last class, your odds go from something like 
+
+81009
+----- = 0.00002 = 0.002%
+2^32
+
+to
+
+  2
+------ = 0.000011 = 0.0011%
+176767
+
+so the answer is "not really."
+
+3245363694
+668869125
+166507326
+161090525
+39776329
+8552499
+4513026
+176767 (2)
+
+remainder
+118005
